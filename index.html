@@ -172,22 +172,39 @@
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
 
-    .card {
-      background: var(--light);
-      border-radius: 9px;
-      padding: 20px;
-      border-left: 4px solid var(--blue);
-    }
+.card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 30px;
+    border-left: 5px solid var(--blue);
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    .card h3 {
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
+.card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+    .experience-photo {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 15px 0;
+    display: block;
+}
 
     .achievement-placeholder {
       height: 145px;
@@ -348,46 +365,31 @@
     </div>
   </section>
 
-  <section id="logros">
-    <h2 class="section-title">Logros y experiencias</h2>
-    <p>En esta sección presentaré evidencias de mis actividades, proyectos y logros académicos.</p>
-    <br>
+<section id="experiencia">
+    <h2 class="section-title">Experiencia laboral</h2>
     <div class="cards">
-      <div class="card">
-        <div class="achievement-placeholder">Fotografía de certificado</div>
-        <h3>Certificados</h3>
-        <p>Capacitaciones y cursos realizados.</p>
-      </div>
-      <div class="card">
-        <div class="achievement-placeholder">Fotografía de proyecto</div>
-        <h3>Proyectos académicos</h3>
-        <p>Trabajos e investigaciones universitarias.</p>
-      </div>
-      <div class="card">
-        <div class="achievement-placeholder">Fotografía de reconocimiento</div>
-        <h3>Reconocimientos</h3>
-        <p>Distinciones y logros personales.</p>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+            <h3>Conductor de camionetas 4x4 – Ageminco y Etcomin</h3>
+          <img src="CAMIONETA.png" alt="Experiencia en camionetas 4x4" class="experience-photo">
+            <p>Experiencia en conducción de camionetas 4x4 en entornos mineros, con capacidad para adaptarme a diferentes condiciones de terreno. Orientado a la conducion defensiva responsable y al cumplimiento de los protocolos de seguridad.</p>
+        </div>
 
-  <section>
-    <h2 class="section-title">Habilidades e intereses</h2>
-    <div class="cards">
       <div class="card">
-        <h3>Área contable</h3>
-        <p>Interés en contabilidad financiera, normas contables y tributación.</p>
-      </div>
-      <div class="card">
-        <h3>Área financiera</h3>
-        <p>Interés en análisis financiero y gestión empresarial.</p>
-      </div>
-      <div class="card">
-        <h3>Herramientas digitales</h3>
-        <p>Interés en Excel y tecnologías aplicadas a la contabilidad.</p>
-      </div>
-    </div>
-  </section>
+    <h3>Conducción de volquetes</h3>
+        <img src="VOLQUETE (2).png" alt="Experiencia en conducción de volquetes" class="experience-photo">
+    <p>Experiencia en operación y conducción de volquetes para el transporte de mineral. Compromiso con la seguridad vial, el manejo responsable de vehículos pesados y el cumplimiento de las actividades asignadas.</p>
+</div>
+
+      
+<div class="card">
+    <h3>Tripulante de transporte – Sumayro</h3>
+  <img src="TRIPULANTE.jpg" alt="Experiencia como tripulante de transporte" class="experience-photo">
+    <p>Responsable de la seguridad y supervisión del personal durante los traslados hacia unidades mineras. Encargado del control de pasajeros, apoyo al conductor durante el recorrido y monitoreo de condiciones de seguridad mediante el sistema TRANSLOGP, reportando incidencias y evidencias fotográficas a la empresa.</p>
+</div>
+
+</section>
+
+
 
   <section id="cursos">
     <h2 class="section-title">Cursos y docentes</h2>
