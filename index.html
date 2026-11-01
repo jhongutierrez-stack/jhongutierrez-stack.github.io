@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio académico y profesional de Jhon Carlos Gutierrez Quispe.">
+  <title>Jhon Carlos | Portafolio Personal</title>
+
+  <style>
+    :root {
+      --navy: #092b50;
+      --blue: #174e83;
+      --gold: #c6a76a;
+      --light: #f3f6fa;
+      --white: #ffffff;
+      --text: #26364a;
+      --muted: #68788b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #092b50, #174e83);
+      color: white;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero small {
+      color: #e3c991;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 55px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      color: #d9e5f2;
+      font-size: 17px;
+      max-width: 570px;
+    }
+
+    .photo-placeholder {
+      width: 210px;
+      height: 250px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      background: #ffffff15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+      color: white;
+    }
+
+    .photo-placeholder span {
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 22px;
+    }
+
+    section {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 18px #102b5010;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: 25px;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 10px;
+      margin-bottom: 22px;
+    }
+
+    .personal-data {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .data-item {
+      background: var(--light);
+      padding: 16px;
+      border-radius: 7px;
+    }
+
+    .data-item strong {
+      color: var(--blue);
+      display: block;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--light);
+      border-radius: 9px;
+      padding: 20px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .achievement-placeholder {
+      height: 145px;
+      background: #e7edf4;
+      border: 1px dashed #9aacc0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      margin-bottom: 14px;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .course-list {
+      list-style: none;
+    }
+
+    .course-list li {
+      padding: 13px;
+      margin-bottom: 10px;
+      background: var(--light);
+      border-radius: 6px;
+    }
+
+    .course-list a, .links a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .course-list a:hover, .links a:hover {
+      text-decoration: underline;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .links a {
+      display: block;
+      background: var(--light);
+      padding: 15px;
+      border-radius: 7px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 27px;
+      font-size: 13px;
+    }
+
+    @media(max-width: 650px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        justify-content: center;
+        text-align: center;
+        padding: 55px 7%;
+      }
+
+      section {
+        padding: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">JCGQ.</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#perfil">Sobre mí</a>
+    <a href="#formacion">Formación</a>
+    <a href="#logros">Logros</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <div class="hero-content">
+    <small>PORTAFOLIO PERSONAL Y PROFESIONAL</small>
+    <h1>Jhon Carlos<br>Gutierrez Quispe</h1>
+    <p>Estudiante de Contabilidad de la Universidad Católica San Pablo. En constante aprendizaje y desarrollo profesional.</p>
+    <a href="#perfil" class="button">Conoce mi perfil</a>
+  </div>
+
+  <div class="photo-placeholder">
+    <span>ESPACIO PARA MI FOTOGRAFÍA PERSONAL</span>
+  </div>
+</div>
+
+<main>
+
+  <section id="perfil">
+    <h2 class="section-title">Datos personales</h2>
+    <div class="personal-data">
+      <div class="data-item">
+        <strong>Nombre completo</strong>
+        Jhon Carlos Gutierrez Quispe
+      </div>
+      <div class="data-item">
+        <strong>Carrera profesional</strong>
+        Contabilidad
+      </div>
+      <div class="data-item">
+        <strong>Universidad</strong>
+        Universidad Católica San Pablo
+      </div>
+      <div class="data-item">
+        <strong>Ubicación</strong>
+        Arequipa, Perú
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:30px">Biografía profesional</h2>
+    <p>
+      Soy estudiante de la carrera de Contabilidad en la Universidad
+      Católica San Pablo. Tengo interés en el ámbito contable,
+      financiero y empresarial. Busco fortalecer mis conocimientos,
+      desarrollar nuevas habilidades y adquirir experiencias que
+      contribuyan a mi crecimiento académico y profesional.
+    </p>
+  </section>
+
+  <section id="formacion">
+    <h2 class="section-title">Formación académica</h2>
+    <div class="card">
+      <h3>Universidad Católica San Pablo</h3>
+      <p><strong>Carrera:</strong> Contabilidad</p>
+      <p><strong>Estado:</strong> Estudios universitarios en curso</p>
+      <p><strong>Ciudad:</strong> Arequipa, Perú</p>
+      <p><a href="https://ucsp.edu.pe/" target="_blank">Visitar sitio web de la UCSP</a></p>
+    </div>
+  </section>
+
+  <section id="logros">
+    <h2 class="section-title">Logros y experiencias</h2>
+    <p>En esta sección presentaré evidencias de mis actividades, proyectos y logros académicos.</p>
+    <br>
+    <div class="cards">
+      <div class="card">
+        <div class="achievement-placeholder">Fotografía de certificado</div>
+        <h3>Certificados</h3>
+        <p>Capacitaciones y cursos realizados.</p>
+      </div>
+      <div class="card">
+        <div class="achievement-placeholder">Fotografía de proyecto</div>
+        <h3>Proyectos académicos</h3>
+        <p>Trabajos e investigaciones universitarias.</p>
+      </div>
+      <div class="card">
+        <div class="achievement-placeholder">Fotografía de reconocimiento</div>
+        <h3>Reconocimientos</h3>
+        <p>Distinciones y logros personales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Habilidades e intereses</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Área contable</h3>
+        <p>Interés en contabilidad financiera, normas contables y tributación.</p>
+      </div>
+      <div class="card">
+        <h3>Área financiera</h3>
+        <p>Interés en análisis financiero y gestión empresarial.</p>
+      </div>
+      <div class="card">
+        <h3>Herramientas digitales</h3>
+        <p>Interés en Excel y tecnologías aplicadas a la contabilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos">
+    <h2 class="section-title">Cursos y docentes</h2>
+    <p>Asignaturas de mi formación universitaria y sus respectivos docentes.</p>
+    <br>
+    <ul class="course-list">
+      <li>Curso: <strong>[Nombre del curso]</strong> — Docente: [Nombre del profesor] — <a href="#" target="_blank">LinkedIn</a></li>
+      <li>Curso: <strong>[Nombre del curso]</strong> — Docente: [Nombre del profesor] — <a href="#" target="_blank">LinkedIn</a></li>
+      <li>Curso: <strong>[Nombre del curso]</strong> — Docente: [Nombre del profesor] — <a href="#" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">Red académica y compañeros</h2>
+    <p>Enlaces a los perfiles y páginas web de mis compañeros universitarios.</p>
+    <br>
+    <div class="links">
+      <a href="#" target="_blank">Compañero 1 – Página web</a>
+      <a href="#" target="_blank">Compañero 2 – Página web</a>
+      <a href="#" target="_blank">Compañero 3 – Página web</a>
+      <a href="#" target="_blank">Compañero 4 – Página web</a>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p><strong>Correo:</strong> [Agregar correo profesional]</p>
+    <p><strong>LinkedIn:</strong> [Agregar enlace a mi perfil]</p>
+    <p><strong>Universidad:</strong> Universidad Católica San Pablo</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Jhon Carlos Gutierrez Quispe</p>
+  <p>Portafolio académico y profesional | Arequipa, Perú</p>
+</footer>
+
+</body>
+</html>
